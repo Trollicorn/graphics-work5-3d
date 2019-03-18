@@ -51,7 +51,7 @@ def torus(edge,args): #[x,y,z,r1,r2]
 
 def p_sphere(x,y,z,r):
     points = []
-    num = 10.0
+    num = 15.0
     for i in range(int(num)):
         phi = 2*pi*i/num
         cosphi = cos(phi)
@@ -65,7 +65,7 @@ def p_sphere(x,y,z,r):
 
 def p_torus(x,y,z,r1,r2):
     points = []
-    num = 10.0
+    num = 15.0
     for i in range(int(num)):
         phi = 2*pi*i/num
         cosphi = cos(phi)

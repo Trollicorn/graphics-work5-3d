@@ -63,4 +63,6 @@ def parse(fname, edge, orders, screen, color):
             display(screen)
         elif line == "clear":
             edge = []
+        else:
+            print line
     f.close()
