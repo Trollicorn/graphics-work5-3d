@@ -17,14 +17,17 @@ def argify(line):
 def parse(fname, edge, orders, screen, color):
     transform = {
         "scale": dilate,
-        "translate": translate,
+        "move": translate,
         "rotate": rotate
     }
     shape = {
         "line": add_edge,
         "circle": circle,
         "hermite": hermite,
-        "bezier": bezier
+        "bezier": bezier,
+        "box": box,
+        "sphere": sphere,
+        "torus": torus
     }
     f = open(fname, 'r')
 
@@ -58,4 +61,6 @@ def parse(fname, edge, orders, screen, color):
             draw_lines(edge,screen,color)
 #            print_matrix(edge)
             display(screen)
+        elif line == "clear":
+            edge = []
     f.close()
