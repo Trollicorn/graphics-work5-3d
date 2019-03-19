@@ -5,17 +5,19 @@ from parse import *
 from transform import *
 from math import cos,sin,tan,radians
 
-num = 40
+num = 30
 angle = 360/num
 for i in range(num):
     screen = new_screen()
-    color = [ 255, 255, 0 ]
+    color = [ 255, 255, 255 ]
     edges = []
     transform = new_matrix()
     ident(transform)
     f = open("epic" + str(i) + ".txt",'w')
     f.write("torus\n0 0 0 40 150\n")
-    f.write("rotate\nx 90\n")
+#    f.write("rotate\nx 90\n")
+    f.write("rotate\ny "+ str(i*angle) + "\n")
+    f.write("rotate\nx "+ str(i*angle) + "\n")
     f.write("rotate\nz "+ str(i*angle) + "\n")
     f.write("move\n250 250 0\n")
     f.write("apply\n")
